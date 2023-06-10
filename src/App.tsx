@@ -23,7 +23,7 @@ function App() {
       </C.Header>
       <C.Body>
         ...
-        <TableArea/>
+        <TableArea list = {filteredList}/>
       </C.Body>
     </C.Container>
   )
