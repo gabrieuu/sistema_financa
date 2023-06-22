@@ -1,33 +1,21 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
-const color = {
-    blueDark: "#00747C",
-    light: "#fefefe",
-    lightBlue:"#00BBC9",
-    lightDark:"#878787",
-    dark:"#202022"
-}
 
 export const Container = styled.div`
-
-`;
-
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+`
 export const Header = styled.div`
-
-background-color: ${color.blueDark};
-height: 150px;
-width: 100%;
-text-align: center;
-`;
-
+    background-color: darkblue;
+    height: 150px;
+    text-align: center;
+`
 export const HeaderText = styled.h1`
-padding-top: 30px;
-color: ${color.light};
-`;
-
+    margin: 0;
+    color: #fff;
+    padding-top: 30px;
+`
 export const Body = styled.div`
-margin: auto;
-max-width: 980px;
-margin-bottom: 50px;
-
-`;
+    margin: auto;
+    max-width: 980px;
+    margin-bottom: 50px;
+`

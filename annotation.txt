@@ -1,0 +1,53 @@
+Quando de trabalha com typescript, precisamos declarar o tipo de qualquer variável.
+
+utilizei interface no lugar de type, eles são bem parecidos e para a maioria dos 
+casos e funcionam da mesma forma.
+
+
+
+ [tag: string]: { 
+        title: string,
+        color: string,
+        expense: boolean
+    }
+//esse '[tag: string]' é uma estrategia interessante no typescript,
+o nome 'tag' é opcional, poderia ser qualquer outro nome, foi colocado o nome 'tag' por escolha individual.
+O [tag: string] vai receber um array de nomes que possuem os mesmos atributos, ex:
+
+categories = {
+    food: {title: 'Alimentação', color:'blue', expense: true},
+    rent: {title: 'Aluguel', color: 'brown', expense: true},
+    salary: {title: 'Salário', color: 'green', expense: false}
+}
+// nesse caso os nomes que mudam são 'food', 'rent' e 'salary', todos esses 3 possui os mesmos atributos, portanto
+posso simplesmente passalos em forma de array no interface: [tag: string]:{define os tipos aqui dentro}
+
+
+
+Digamos que temos uma interface de Jogos:
+
+export interface Jogos{
+	nome: string,
+	anoLancamento: Date
+};
+
+e temos tambem um objeto que possui os valores desses jogos:
+
+export const listaJogos: Jogos[] = [
+	{nome: 'Street Fight', anoLancamento: new Date(1987,8,12)},
+	{nome: 'Mario', anoLancamento: new Date(1985,9,13)}
+];
+
+para tipar um state deve usar <Jogos[]> logo após a invocação, exemplo:
+
+const [list, setList] = useState<Jogos[]>(listaJogos)
+
+
+
+
+let now = new Date(); // pega a data atual.
+
+
+export const filterListByMonth = (list:Item[], date:string): Item[] => {
+    
+}// retorna um array de Items.
