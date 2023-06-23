@@ -6,9 +6,10 @@ import { dataOriginal } from '../../helpers/dateFilter'
 
 type Props = {
     onAdd : (item:Item) => void;
-}
+    fecharModal: () => void;
+}   
 
-export const FormArea = ({ onAdd }: Props) => {
+export const FormArea = ({ onAdd, fecharModal}: Props) => {
     
     const [dateField,setDateField] = useState('');
     const [categoryField,setCategoryField] = useState('');
@@ -28,7 +29,7 @@ export const FormArea = ({ onAdd }: Props) => {
 
     return (
         <C.Container>
-
+            <C.Title>Adicionar</C.Title>
             <C.InputBox>
                 <C.InputTitle>Data</C.InputTitle>
                 <C.Input type='date' value={dateField} onChange={e => setDateField(e.target.value)}/>
@@ -50,7 +51,10 @@ export const FormArea = ({ onAdd }: Props) => {
                 <C.InputTitle>Value</C.InputTitle>
                 <C.Input type='number' value={valueField} onChange={e => setValueField(parseFloat(e.target.value))}></C.Input>
             </C.InputBox>
-            <C.Button onClick={handleAddEvent}>Adicionar</C.Button>
+            <C.BtnContainer>
+            <C.Button  onClick={handleAddEvent}>Adicionar</C.Button>
+            <C.Button color = '#bbb' onClick={fecharModal}>Fechar</C.Button>
+            </C.BtnContainer>
         </C.Container>
     )
 }

@@ -59,11 +59,11 @@ const App = () => {
          expense = {expense}
         />
 
-        <FormArea onAdd = {handleAddItem}/>
+        
 
         <TableArea list = {filteredList}/>
       </C.Body>
-      <AddItem />
+      <AddItem funcao = {handleAddItem}/>
     </C.Container>
   )
 }
