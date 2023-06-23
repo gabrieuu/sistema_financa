@@ -8,7 +8,7 @@ import {getCurrentMonth, filterListByMonth} from './helpers/dateFilter'
 import {TableArea} from './components/TableArea'
 import {InfoArea} from './components/InfoArea'
 import {FormArea} from './components/FormArea'
-
+import {AddItem} from './components/AddItem'
 const App = () => {
   const [list, setList] = useState(items);
   const [filteredList,setFilteredList] = useState<Item[]>([])
@@ -63,6 +63,7 @@ const App = () => {
 
         <TableArea list = {filteredList}/>
       </C.Body>
+      <AddItem />
     </C.Container>
   )
 }

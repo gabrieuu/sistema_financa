@@ -51,3 +51,40 @@ let now = new Date(); // pega a data atual.
 export const filterListByMonth = (list:Item[], date:string): Item[] => {
     
 }// retorna um array de Items.
+
+
+STYLED COMPONENTS:
+
+(para importar o styled component é assim: 
+
+import styled from 'styled-components'
+
+depois é só usar a variável 'styled'.)
+
+(como usar o hover no styled components? Para usa-lo, você precisa entrar no arquivo do style.ts
+e adicionar um '&:hover{}'.)
+
+
+
+BOTAO DE AÇÃO : ADICIONAR OU REMOVER 
+
+ADICIONAR UM MODAL.
+
+Dialog
+Dialog é semelhante ao modal, porém mostra uma ação onde a pessoa usuária deve escolher um dos fluxos. Um modal de confirmação é um bom exemplo de uso do componente dialog.
+
+Drawer
+Drawer é bastante usada para mostrar itens e informações relevantes de um site. Na maioria dos casos tem a opção de abrir a partir de um botão de menu.
+
+Menu
+Menu é utilizado quando queremos que a pessoa usuária escolha uma opção rapidamente. É bastante similar ao componente select, nativo do HTML.
+
+Popover
+Popover exibe a informação dentro de um container que flutua perto do botão de ação. É mais utilizado para auxiliar pessoas que precisam de informações.
+
+para usar o Modal do react, importe-o primeiro.
+
+import Modal from 'react-modal'
+
+Modal.setAppElement('#root');
+
